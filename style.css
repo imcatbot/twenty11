@@ -62,7 +62,6 @@ a img {
 LAYOUT: Two columns
 DESCRIPTION: Two-column fixed layout with one sidebar right of content
 */
-
 #container {
 	float: left;
 	margin: 0 -240px 0 0;
@@ -71,6 +70,7 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 #content {
 	margin: 0 280px 0 20px;
 }
+
 #primary,
 #secondary {
 	float: right;
@@ -166,7 +166,7 @@ div.menu,
 }
 #wrapper {
 	background: #fff;
-	margin-top: 20px;
+	margin-top: 10px;
 	padding: 0 20px;
 }
 
@@ -332,7 +332,7 @@ a:hover {
 -------------------------------------------------------------- */
 
 #header {
-	padding: 30px 0 0 0;
+	padding: 3px 0 0 0;
 }
 #site-title {
 	float: left;
@@ -342,7 +342,7 @@ a:hover {
 	width: 700px;
 }
 #site-title a {
-	color: #000;
+	color: #fff;
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -367,10 +367,11 @@ a:hover {
 -------------------------------------------------------------- */
 
 #access {
-	background: #000;
+	background: #6ca8e5;
 	display: block;
 	float: left;
 	margin: 0 auto;
+	margin-top:1px;
 	width: 940px;
 }
 #access .menu-header,
@@ -390,9 +391,9 @@ div.menu li {
 	position: relative;
 }
 #access a {
-	color: #aaa;
+	color: #fff;
 	display: block;
-	line-height: 38px;
+	line-height: 32px;
 	padding: 0 10px;
 	text-decoration: none;
 }
@@ -451,8 +452,9 @@ div.menu li {
 #main {
 	clear: both;
 	overflow: hidden;
-	padding: 40px 0 0 0;
+	padding: 10px 0 0 0;
 }
+
 #content {
 	margin-bottom: 36px;
 }
@@ -555,6 +557,13 @@ div.menu li {
 .page-title a:active,
 .page-title a:hover {
 	color: #ff4b33;
+}
+.my-entry-title {
+	color: #000;
+	font-size: 12px;
+	/*font-weight: bold;*/
+	/*line-height: 1.3em;*/
+	margin-bottom: 0;
 }
 #content .entry-title {
 	color: #000;
@@ -1158,7 +1167,7 @@ h3#reply-title {
 /* Main sidebars */
 #main .widget-area ul {
 	margin-left: 0;
-	padding: 0 20px 0 0;
+	padding: 20px 20px 0 0;
 }
 #main .widget-area ul ul {
 	border: none;
@@ -1173,7 +1182,6 @@ h3#reply-title {
 /* Footer widget areas */
 #footer-widget-area {
 }
-
 
 /* =Footer
 -------------------------------------------------------------- */
@@ -1322,3 +1330,4 @@ code {
 		border: none;
 	}
 }
+

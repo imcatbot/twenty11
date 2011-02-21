@@ -21,9 +21,9 @@ get_header(); ?>
 
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<?php if ( is_front_page() ) { ?>
-						<h2 class="entry-title"><?php the_title(); ?></h2>
+						<span class="entry-title"></span>
 					<?php } else { ?>
-						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<span class="my-entry-title">当前位置:<?php the_title(); ?></span><hr/>	
 					<?php } ?>
 
 					<div class="entry-content">

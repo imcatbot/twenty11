@@ -67,7 +67,15 @@
 
 			<div class="entry-content">
 <?php if ( post_password_required() ) : ?>
-				<?php the_content(); ?>
+				<!-- <?php the_content(); ?> -->
+				<?php
+					if (is_single() or is_page()) {
+					   the_content();
+					} else {
+					  the_excerpt();
+        				}
+                                ?>
+
 <?php else : ?>			
 				<?php 
 					$images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );

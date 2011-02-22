@@ -114,7 +114,8 @@ input,
 textarea,
 .page-title span,
 .pingback a.url {
-	font-family: Georgia, "Bitstream Charter", serif;
+/*	font-family: Georgia, "Bitstream Charter", serif;*/
+	font-family: verdana,arial,helvetica, sans-serif;
 }
 h3#comments-title,
 h3#reply-title,
@@ -524,17 +525,19 @@ div.menu li {
 }
 #content tr th,
 #content thead th {
-	/*color: #888;*/
-	font-size: 12px;
+	color: #000;
+	font-size: 10pt;
 	font-weight: bold;
 	line-height: 18px;
-	padding: 9px 24px;
+	padding: 3px 24px 0 0;
 }
 #content tr td {
 	/*border-top: 1px solid #e7e7e7;*/
 	padding: 2px 2px;
+	font-size: 10pt;
 }
 #content tr.odd td {
+
 	background: #f2f7fc;
 }
 
@@ -579,13 +582,13 @@ div.menu li {
 }
 .my-entry-title {
 	color: #000;
-	font-size: 12px;
+	font-size: 9pt;
 	/*font-weight: bold;*/
 	/*line-height: 1.3em;*/
 	margin-bottom: 0;
 }
 #content .entry-title {
-	color: #000;
+	color: #01005c;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 1.3em;
@@ -601,7 +604,7 @@ div.menu li {
 	color: #ff4b33;
 }
 .entry-meta {
-	color: #888;
+	color: #000;
 	font-size: 12px;
 }
 .entry-meta abbr,
@@ -725,7 +728,7 @@ body.page .edit-link {
 }
 .entry-meta a,
 .entry-utility a {
-	color: #888;
+	color: #000;
 }
 .entry-meta a:hover,
 .entry-utility a:hover {

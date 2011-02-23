@@ -25,7 +25,7 @@ if( isset($_POST['tougao_form']) && $_POST['tougao_form'] == 'send')
     $content =  isset( $_POST['tougao_content'] ) ? trim(htmlspecialchars($_POST['tougao_content'], ENT_QUOTES)) : '';
    
    $category = '联系我们';
-   $email = "contactme@cccme.com";
+   //$email = "contactme@cccme.com";
 
     // 表单项数据验证
     if ( empty($name) || strlen($name) > 20 )
@@ -34,10 +34,10 @@ if( isset($_POST['tougao_form']) && $_POST['tougao_form'] == 'send')
 
     }
    
-    if ( empty($email) || strlen($email) > 60 || !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
-    {
-        wp_die('Email必须填写，且长度不得超过60字，必须符合Email格式');
-    }
+    //    if ( empty($email) || strlen($email) > 60 || !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
+    //    {
+    //wp_die('Email必须填写，且长度不得超过60字，必须符合Email格式');
+    //}
    
     if ( empty($title) || strlen($title) > 100 )
     {
@@ -49,7 +49,7 @@ if( isset($_POST['tougao_form']) && $_POST['tougao_form'] == 'send')
         wp_die('内容必须填写，且长度不得超过3000字，不得少于100字');
     }
    
-    $post_content = '昵称: '.$name.'<br />Email: '.$email.'<br />内容:'.$content;
+    $post_content = '姓名: '.$name.'<br />Email: '.$email.'<br />内容:'.$content;
  
     $tougao = array(
         'post_title' => $title,
@@ -60,7 +60,8 @@ if( isset($_POST['tougao_form']) && $_POST['tougao_form'] == 'send')
 
     // 将文章插入数据库
     $status = wp_insert_post( $tougao );
- 
+
+    echo "aa";	    
     if ($status != 0)
     {
         // 投稿成功给博主发送邮件
@@ -93,20 +94,29 @@ get_header(); ?>
 					<div class="entry-content">
 					<?php the_content(); ?>
 					<form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
-    <div style="text-align: left; padding-top: 10px;">
-        <label>昵称:*</label>
+						   <table>
+						   <tr><td>你的名字</td><td><input type="text" size="20" value="" name="tougao_authorname" /></td></tr>
+			   <tr><td>你的邮箱</td><td><input type="text" size="20" value="" name="tougao_authoremail" /></td></tr>
+						   <tr><td>标题</td><td><input type="text" size="40" value="" name="tougao_title" /></td></tr>
+						   <tr><td style="vertical-align: top;">留言内容</td>
+						   <td>
+						   <textarea rows="6" cols="40" name="tougao_content"></textarea></td></tr>
+						   </table>
+<!--						   
+    <div style="text-align: left;">
+        <label>你的名字:*</label>
     </div>
     <div>
         <input type="text" size="40" value="" name="tougao_authorname" />
     </div>
-<!--
-    <div style="text-align: left; padding-top: 10px;">
-        <label>E-Mail:*</label>
+    <div style="text-align: left;">
+						   <label>你的电子邮件:</label>
     </div>
     <div>
         <input type="text" size="40" value="" name="tougao_authoremail" />
     </div>
-                   
+-->
+<!--                   
     <div style="text-align: left; padding-top: 10px;">
         <label>您的博客:</label>
     </div>
@@ -114,13 +124,14 @@ get_header(); ?>
         <input type="text" size="40" value="" name="tougao_authorblog" />
     </div>
 -->
-                   
-    <div style="text-align: left; padding-top: 2px;">
-        <label>主题:*</label>
+   <!--                
+    <div style="text-align: left;">
+        <label>标题:*</label>
     </div>
     <div>
         <input type="text" size="40" value="" name="tougao_title" />
     </div>
+-->
 <!--
     <div style="text-align: left; padding-top: 10px;">
         <label>分类:*</label>
@@ -130,14 +141,14 @@ get_header(); ?>
         <?php wp_dropdown_categories('show_count=1&hierarchical=1'); ?>
     </div>
 -->                   
-    <div style="text-align: left; padding-top: 3px;">
-        <label>内容:*</label>
+<!--
+    <div style="text-align: left; ">
+        <label>留言内容:*</label>
     </div>
     <div>
         <textarea rows="6" cols="40" name="tougao_content"></textarea>
     </div>
-                   
-    <br clear="all">
+    -->               
     <div style="text-align: center; padding-top: 10px;">
         <input type="hidden" value="send" name="tougao_form" />
         <input type="submit" value="提交" />

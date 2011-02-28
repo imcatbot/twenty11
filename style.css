@@ -76,7 +76,7 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 #secondary {
 	float: right;
 	overflow: hidden;
-	width: 220px;
+	width: 240px;
 }
 #secondary {
 	clear: right;
@@ -169,7 +169,7 @@ div.menu,
 #wrapper {
 	background: #fff;
 	margin-top: 10px;
-	padding: 0 20px;
+	padding: 0 5px;
 }
 
 /* Structure the footer area */
@@ -313,7 +313,7 @@ textarea {
 	padding: 2px;
 }
 a:link {
-	color: #0066cc;
+	color: #1453b1;/*#0066cc;*/
 }
 a:visited {
 	color: #743399;
@@ -335,6 +335,7 @@ a:hover {
 
 #header {
 	padding: 3px 0 0 0;
+
 }
 #site-title {
 	float: left;

@@ -369,16 +369,16 @@ a:hover {
 -------------------------------------------------------------- */
 
 #access {
-	background: #6ca8e5;
+	background:#1453b1; /*rgb(20, 83, 177)*/  /*#428aeb; #6ca8e5;*/
 	display: block;
 	float: left;
 	margin: 0 auto;
-	margin-top:1px;
+	margin-top:2px;
 	width: 940px;
 }
 #access .menu-header,
 div.menu {
-	font-size: 13px;
+	font-size: 10pt;
 	margin-left: 12px;
 	width: 928px;
 }
@@ -427,17 +427,25 @@ div.menu li {
 }
 #access li:hover > a,
 #access ul ul :hover > a {
-	background: #333;
-	color: #fff;
+	background: #fff;
+	color: #1453b1;
+    border-top:1px solid #1453b1;
 }
 #access ul li:hover > ul {
+
 	display: block;
+}
+#access li.current {
+    background: #666;
+    color: #fff;
 }
 #access ul li.current_page_item > a,
 #access ul li.current-menu-ancestor > a,
 #access ul li.current-menu-item > a,
 #access ul li.current-menu-parent > a {
-	color: #fff;
+    border-top:1px solid #1453b1;
+	color: #1453b1;
+	background:#fff;
 }
 * html #access ul li.current_page_item a,
 * html #access ul li.current-menu-ancestor a,
@@ -881,7 +889,7 @@ body.page .edit-link {
 
 .navigation {
 	color: #888;
-	font-size: 12px;
+	font-size: 10pt;
 	line-height: 18px;
 	overflow: hidden;
 }

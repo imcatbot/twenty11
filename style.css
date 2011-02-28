@@ -555,6 +555,9 @@ div.menu li {
 	text-decoration: none;
 }
 
+#content a:hover {
+text-decoration: underline;
+}
 .hentry {
 	margin: 0 0 48px 0;
 }
@@ -1138,7 +1141,7 @@ h3#reply-title {
 	margin: 0 0 18px 0;
 }
 .widget-title {
-	color: #000;
+	color: #1453b1;
 	font-size:10pt;
 	font-weight: bold;
 }

@@ -56,7 +56,7 @@
 <div id="wrapper" class="hfeed">
 	<div id="header">
 		<div id="masthead" >
-			<div id="branding" role="banner" style="background-color:#1453b1;height:80px;">
+			<div id="branding" role="banner" style="background:#000 url(wp-content/themes/twentyten/images/header-bg.png); height:100px;">
 				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 				<<?php echo $heading_tag; ?> id="site-title">
 					<span>

@@ -339,9 +339,9 @@ a:hover {
 }
 #site-title {
 	float: left;
-	font-size: 30px;
+	font-size: 36px;
 	line-height: 36px;
-	margin: 0 0 18px 0;
+	margin: 12px 50px 18px 12px;
 	width: 700px;
 }
 #site-title a {

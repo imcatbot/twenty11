@@ -13,7 +13,7 @@ if( isset($_POST['tougao_form']) && $_POST['tougao_form'] == 'send')
     // 相比Cookie来验证两次投稿的时间差，读数据库的方式更加安全
     if ( time() - strtotime($last_post) < 120 )
     {
-        wp_die('您投稿也太勤快了吧，先歇会儿！');
+        wp_die('您留言也太勤快了吧，先歇会儿！');
     }
        
     // 表单变量初始化
@@ -69,11 +69,11 @@ if( isset($_POST['tougao_form']) && $_POST['tougao_form'] == 'send')
         // My subject替换为邮件标题，content替换为邮件内容
         //wp_mail("somebody#example.com","My subject","content");
 
-        wp_die('投稿成功！感谢投稿！');
+        wp_die('感谢给我们留言！');
     }
     else
     {
-        wp_die('投稿失败！');
+        wp_die('留言失败！');
     }
 }
 
@@ -97,7 +97,7 @@ get_header(); ?>
 						   <table>
 						   <tr><td>你的名字</td><td><input type="text" size="20" value="" name="tougao_authorname" /></td></tr>
 			   <tr><td>你的邮箱</td><td><input type="text" size="20" value="" name="tougao_authoremail" /></td></tr>
-						   <tr><td>标题</td><td><input type="text" size="40" value="" name="tougao_title" /></td></tr>
+						   <tr><td>标题</td><td><input type="text" size="41" value="" name="tougao_title" /></td></tr>
 						   <tr><td style="vertical-align: top;">留言内容</td>
 						   <td>
 						   <textarea rows="6" cols="40" name="tougao_content"></textarea></td></tr>

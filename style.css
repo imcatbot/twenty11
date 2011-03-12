@@ -1203,12 +1203,15 @@ h3#reply-title {
 /* Main sidebars */
 #main .widget-area ul {
 	margin-left: 0;
-	padding: 20px 20px 0 0;
+	padding: 20px 3px 3px 3px;
 }
 #main .widget-area ul ul {
 	border: none;
 	margin-left: 1.3em;
 	padding: 0;
+}
+.widget-area {
+    border:0px solid #F00;
 }
 #primary {
 }

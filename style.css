@@ -350,11 +350,14 @@ a:hover {
 	text-decoration: none;
 }
 #site-description {
-	clear: right;
-	float: right;
+	//clear: right;
+	//float: right;
+        font-size:14pt;
+        color:#FFF;            
 	font-style: italic;
-	margin: 14px 0 18px 0;
-	width: 220px;
+	margin: 0px 0 0px 0;
+        padding-left: 50px;
+        width:600px;           
 }
 
 /* This is the custom header image */

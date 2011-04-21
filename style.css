@@ -185,14 +185,16 @@ div.menu,
 	margin-right: 0;
 }
 #site-info {
-	float: left;
+	/*float: left;*/
 	font-size: 14px;
-	font-weight: bold;
-	width: 700px;
+	/*font-weight: bold;*/
+	/*width: 700px;*/
+	text-align:center;
 }
 #site-generator {
-	float: right;
-	width: 220px;
+	/*float: right;*/
+	/*width: 220px;*/
+	text-align:center;
 }
 
 
@@ -1232,7 +1234,7 @@ h3#reply-title {
 	margin-bottom: 20px;
 }
 #colophon {
-	border-top: 4px solid #000;
+	border-top: 1px solid #ABD;
 	margin-top: -4px;
 	overflow: hidden;
 	padding: 18px 0;
@@ -1245,7 +1247,7 @@ h3#reply-title {
 	text-decoration: none;
 }
 #site-generator {
-	font-style: italic;
+	/*font-style: italic;*/
 	position: relative;
 }
 #site-generator a {

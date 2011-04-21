@@ -34,7 +34,7 @@
 				<a href="<?php echo esc_url( __('http://wordpress.org/', 'twentyten') ); ?>"
 						title="<?php esc_attr_e('Semantic Personal Publishing Platform', 'twentyten'); ?>" rel="generator"> -->
 					<?php printf( 'Copyright &copy; 2011' ); ?>
-				</a>
+				<!-- </a> -->
 			</div><!-- #site-generator -->
 
 		</div><!-- #colophon -->

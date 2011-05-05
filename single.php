@@ -23,7 +23,7 @@ get_header(); ?>
 					<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '</span>' ); ?></div>
 				</div>--><!-- #nav-above -->
 				
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>  style="background-color:#F6F9FD;">
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 					<h1 class="entry-title" style=" text-align: center;" ><?php the_title(); ?></h1>
 
 					<div class="entry-meta" style=" text-align: center;">

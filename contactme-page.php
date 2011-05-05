@@ -34,10 +34,10 @@ if( isset($_POST['tougao_form']) && $_POST['tougao_form'] == 'send')
 
     }
    
-    //    if ( empty($email) || strlen($email) > 60 || !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
-    //    {
-    //wp_die('Email必须填写，且长度不得超过60字，必须符合Email格式');
-    //}
+    if ( empty($email) || strlen($email) > 60 || !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
+      {
+	wp_die('Email必须填写，且长度不得超过60字，必须符合Email格式');
+      }
    
     if ( empty($title) || strlen($title) > 100 )
     {
@@ -59,15 +59,16 @@ if( isset($_POST['tougao_form']) && $_POST['tougao_form'] == 'send')
 
 
     // 将文章插入数据库
-    $status = wp_insert_post( $tougao );
-
-    echo "aa";	    
-    if ($status != 0)
+    //$status = wp_insert_post( $tougao );
+    
+    //echo "aa";	    
+    //if ($status != 0)
+    if (1)
     {
         // 投稿成功给博主发送邮件
         // somebody#example.com替换博主邮箱
         // My subject替换为邮件标题，content替换为邮件内容
-        //wp_mail("somebody#example.com","My subject","content");
+        wp_mail("talk90091e@gmail.com",$title,$post_content);
 
         wp_die('感谢给我们留言！');
     }
@@ -81,7 +82,7 @@ get_header(); ?>
 
 		<div id="container">
 			<div id="content" role="main">
-
+  <div id="head_ads"><?php print $head_ads;?></div>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

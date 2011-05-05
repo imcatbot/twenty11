@@ -11,7 +11,7 @@ get_header(); ?>
 
 		<div id="container">
 			<div id="content" role="main">
-
+  <div id="head_ads"><?php print $head_ads;?></div>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
       	   		        <span class="my-entry-title">当前位置:
 				<?php the_title(); ?>

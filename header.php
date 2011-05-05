@@ -91,3 +91,7 @@
 	</div><!-- #header -->
 
 	<div id="main">
+	  <?php
+	  global $head_ads;
+$head_ads="交通事故索赔咨询热线:123-1234-5678 陈燕洁律师";
+	  ?>

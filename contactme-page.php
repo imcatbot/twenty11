@@ -23,6 +23,7 @@ if( isset($_POST['tougao_form']) && $_POST['tougao_form'] == 'send')
     $title =  isset( $_POST['tougao_title'] ) ? trim(htmlspecialchars($_POST['tougao_title'], ENT_QUOTES)) : '';
     $category =  isset( $_POST['cat'] ) ? (int)$_POST['cat'] : 0;
     $content =  isset( $_POST['tougao_content'] ) ? trim(htmlspecialchars($_POST['tougao_content'], ENT_QUOTES)) : '';
+   $this_mail_to =  isset( $_POST['mail_to'] ) ? trim(htmlspecialchars($_POST['mail_to'], ENT_QUOTES)) : '';
    
    $category = '联系我们';
    //$email = "contactme@cccme.com";
@@ -49,7 +50,7 @@ if( isset($_POST['tougao_form']) && $_POST['tougao_form'] == 'send')
         wp_die('内容必须填写，且长度不得超过3000字，不得少于100字');
     }
    
-    $post_content = '姓名: '.$name.'<br />Email: '.$email.'<br />内容:'.$content;
+    $post_content = '姓名: '.$name.'<br/>Email: '.$email.'<br/><br/><p>'.$content.'</p>';
  
     $tougao = array(
         'post_title' => $title,
@@ -68,7 +69,8 @@ if( isset($_POST['tougao_form']) && $_POST['tougao_form'] == 'send')
         // 投稿成功给博主发送邮件
         // somebody#example.com替换博主邮箱
         // My subject替换为邮件标题，content替换为邮件内容
-        wp_mail("talk90091e@gmail.com",$title,$post_content);
+        
+	wp_mail($this_mail_to, $title, $post_content, "Content-Type: text/html");
 
         wp_die('感谢给我们留言！');
     }
@@ -95,6 +97,12 @@ get_header(); ?>
 					<div class="entry-content">
 					<?php the_content(); ?>
 					<form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
+<?php
+        $this_mail_to = "605071089@qq.com";
+        $mykey_values = get_post_custom_values('mail_to');
+        $this_mail_to = $mykey_values[0];
+?>
+<input type="hidden" name="mail_to" value="<?php echo $this_mail_to?>"/>
 						   <table>
 						   <tr><td>你的名字</td><td><input type="text" size="20" value="" name="tougao_authorname" /></td></tr>
 			   <tr><td>你的邮箱</td><td><input type="text" size="20" value="" name="tougao_authoremail" /></td></tr>

@@ -18,8 +18,11 @@ get_header(); ?>
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 					<div class="entry-content">
-						   <?php the_content(); ?>
-<div id="toparticle">
+
+<br/>						   <?php the_content(); ?>
+<table id="toparticle" border="0" cellspacing="1" cellpadding="1">
+<tbody>
+
 <?php
 
 //截断函数  
@@ -75,13 +78,16 @@ function chinasuber($sourcestr,$cutlength){
       $ptitle = $post->post_title;
       $plink = get_permalink($pid);
       $pcontent = chinasuber($post->post_content, 240);
+      echo "<tr>";
       echo "<h2><a href=\"$plink\">$ptitle</a></h2>";
       echo "<p>$pcontent";
       echo "<a href=\"$plink\">阅读全部</a></p><br/>";
+      echo "</tr>";
     }
   
 ?>
-</div>
+</tbody>
+</table>
 <br/>
 
 						   <?php

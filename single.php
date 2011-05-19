@@ -30,12 +30,35 @@ get_header(); ?>
 						<?php twentyten_posted_on(); ?>
 					</div><!-- .entry-meta -->
 					
-					<div class="entry-content">
+					<div class="entry-content" id="customizetext">
 						<?php the_content(); ?>
 
 <!--						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?> -->
 					</div><!-- .entry-content -->
-
+					<script language="javascript" type="text/javascript">
+copyrightok = 0;
+temphtml = document.getElementById('customizetext').innerHTML;
+re = /(\n.*<\s*[^a><][^><]*>[^><]*)(广州交通事故赔偿)([^><]*<)/ig;
+temphtml = temphtml.replace(re, '$1<a href=\"http://www.cyjlawyer.com\" class=\"WU\">$2<\/a>$3');
+re = /(\n.*<\s*[^a><][^><]*>[^><]*)(广州交通事故索赔)([^><]*<)/ig;
+temphtml = temphtml.replace(re, '$1<a href=\"http://www.cyjlawyer.com\" class=\"WU\">$2<\/a>$3');
+re = /(\n.*<\s*[^a><][^><]*>[^><]*)(广州交通事故律师)([^><]*<)/ig;
+temphtml = temphtml.replace(re, '$1<a href=\"http://www.cyjlawyer.com\" class=\"WU\">$2<\/a>$3');
+re = /(\n.*<\s*[^a><][^><]*>[^><]*)(交通事故赔偿)([^><]*<)/ig;
+temphtml = temphtml.replace(re, '$1<a href=\"http://www.cyjlawyer.com\" class=\"WU\">$2<\/a>$3');
+re = /(\n.*<\s*[^a><][^><]*>[^><]*)(交通事故索赔)([^><]*<)/ig;
+temphtml = temphtml.replace(re, '$1<a href=\"http://www.cyjlawyer.com\" class=\"WU\">$2<\/a>$3');
+re = /(\n.*<\s*[^a><][^><]*>[^><]*)(交通事故律师)([^><]*<)/ig;
+temphtml = temphtml.replace(re, '$1<a href=\"http://www.cyjlawyer.com\" class=\"WU\">$2<\/a>$3');
+re = /(\n.*<\s*[^a><][^><]*>[^><]*)(交通事故处理)([^><]*<)/ig;
+temphtml = temphtml.replace(re, '$1<a href=\"http://www.cyjlawyer.com\" class=\"WU\">$2<\/a>$3');
+re = /(\n.*<\s*[^a><][^><]*>[^><]*)(交通事故案例)([^><]*<)/ig;
+temphtml = temphtml.replace(re, '$1<a href=\"http://www.cyjlawyer.com\" class=\"WU\">$2<\/a>$3');
+re = /(\n.*<\s*[^a><][^><]*>[^><]*)(交通事故)([^><]*<)/ig;
+temphtml = temphtml.replace(re, '$1<a href=\"http://www.cyjlawyer.com\" class=\"WU\">$2<\/a>$3');
+document.getElementById('customizetext').innerHTML = temphtml;
+copyrightok++;
+</script>
 <?php if ( get_the_author_meta( 'description' ) ) : // If a user has filled out their description, show a bio on their entries  ?> 
 					<div id="entry-author-info">
 						<div id="author-avatar">

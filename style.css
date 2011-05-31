@@ -497,6 +497,8 @@ div.menu li {
 }
 
 #content p {
+        padding-top: 10px;
+        padding-bottom:10px;
     	text-indent: 0em;
 	line-height: 1.8em;
 }

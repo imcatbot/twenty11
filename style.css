@@ -315,7 +315,8 @@ textarea {
 	padding: 2px;
 }
 a:link {
-	color: #1453b1;/*#0066cc;*/
+	/*color: #1453b1;/*#0066cc;*/
+	color: #0265C1;
 }
 a:visited {
 	color: #743399;
@@ -354,9 +355,9 @@ a:hover {
 #site-description {
 	//clear: right;
 	//float: right;
-        font-size:14pt;
+        font-size:16pt;
         color:#FFF;            
-	font-style: italic;
+	font-style: bold;
 	margin: 0px 0 0px 0;
         padding-left: 50px;
         width:600px;           
@@ -425,11 +426,12 @@ div.menu li {
 	top: 0;
 }
 #access ul ul a {
-	background: #333;
+	background: #418FD8;
 	line-height: 1em;
 	padding: 10px;
 	width: 160px;
 	height: auto;
+	
 }
 #access li:hover > a,
 #access ul ul :hover > a {
@@ -442,8 +444,8 @@ div.menu li {
 	display: block;
 }
 #access li.current {
-    background: #666;
-    color: #fff;
+    background: #fff;
+    color: #666;
 }
 #access ul li.current_page_item > a,
 #access ul li.current-menu-ancestor > a,
@@ -1160,7 +1162,7 @@ h3#reply-title {
 	margin: 0 0 18px 0;
 }
 .widget-title {
-	color: #1453b1;
+	color: #418FD8;
 	font-size:10pt;
 	font-weight: bold;
 }

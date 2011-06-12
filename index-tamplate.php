@@ -127,6 +127,9 @@ function chinasuber($sourcestr,$cutlength){
       } else {
 	$pdate = "<span id=\"old_news\">".$pdate."</span>";
       }
+      if ($cat != "新闻动态") {
+	$pdate = "";
+      }
       //echo "link=".$plink;
       //echo "<li><a href=\"$plink\">$ptitle</a></li>";
 echo "<tr><td style=\"vertical-align: top;\" colspan=\"2\">&bull; <a href=\"$plink\">$ptitle</a> $pdate</td></tr>";

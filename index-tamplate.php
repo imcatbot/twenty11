@@ -118,9 +118,18 @@ function chinasuber($sourcestr,$cutlength){
       //echo "title=".$post->post_title;
       $ptitle = $post->post_title;
       $plink = get_permalink($pid);
+
+      $today = date('Y-m-d');
+      $pdate = $post->post_date;
+      $is_new = strncasecmp($today, $pdate, 10);
+      if ($is_new == 0) {
+	$pdate = "<span id=\"today_news\">".$pdate."</span>";
+      } else {
+	$pdate = "<span id=\"old_news\">".$pdate."</span>";
+      }
       //echo "link=".$plink;
       //echo "<li><a href=\"$plink\">$ptitle</a></li>";
-echo "<tr><td style=\"vertical-align: top;\" colspan=\"2\"><a href=\"$plink\">$ptitle</a></td></tr>";
+echo "<tr><td style=\"vertical-align: top;\" colspan=\"2\">&bull; <a href=\"$plink\">$ptitle</a> $pdate</td></tr>";
     }
   
 

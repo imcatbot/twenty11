@@ -18,8 +18,8 @@ del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+fieldset, form, label, legend{
+/*table, caption, tbody, tfoot, thead, tr, th, td {*/
 	background: transparent;
 	border: 0;
 	margin: 0;
@@ -770,6 +770,17 @@ body.page .edit-link {
 }
 #content .video-player {
 	padding: 0;
+}
+
+/* ---------设置新闻日期的颜色风格------------- */
+#today_news {
+  	color: red;
+	font-size: 10px;
+}
+
+#old_news {
+  	color: gray;
+	font-size: 10px;  
 }
 
 

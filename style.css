@@ -352,12 +352,13 @@ a:hover {
 	font-weight: bold;
 	text-decoration: none;
 }
+/* 副标题 */
 #site-description {
 	//clear: right;
 	//float: right;
-        font-size:16pt;
-        color:#FFF;            
-	font-style: bold;
+        font-size:21px;
+        color:red;            
+	font-weight: bold;
 	margin: 0px 0 0px 0;
         padding-left: 50px;
         width:600px;           

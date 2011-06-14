@@ -23,7 +23,7 @@ get_header(); ?>
 					<?php if ( is_front_page() ) { ?>
 						<span class="entry-title"></span>
 					<?php } else { ?>
-						<span class="my-entry-title">当前位置:<?php the_title(); ?></span><hr/>	
+						<div class="my-entry-title">当前位置:<?php the_title(); ?></div>	
 					<?php } ?>
 
 					<div class="entry-content">

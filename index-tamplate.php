@@ -34,11 +34,11 @@ get_header(); ?>
 						    $page_id = $page->ID;
 
 						    ?>
-						   <table style="text-align: left; width: 90%;" border="0" cellspacing="1" cellpadding="1">
+						   <table style="text-align: left; width: 100%;" border="0" cellspacing="1" cellpadding="1">
 <tbody>
-<tr style="background-color: #fff; border-bottom:1px solid #c3daf2;">
-<th style="vertical-align: top;font-size:9pt;"><?php echo $cat;?></th>
-<th style="vertical-align: top; text-align: right;font-size:9pt;"><a href="?page_id=<?php echo $page_id; ?>">更多内容&gt;&gt;</a></th>
+<tr style="background-color: #F1F7FC; border-bottom:1px solid #c3daf2; border-top:1px solid #c3daf2;">
+<th style="font-weight: bold;font-size:10pt; color: #418FD8;"><?php echo $cat;?></th>
+<th style="vertical-align: top; text-align: right;font-size:9pt; color: #418FD8;"><a href="?page_id=<?php echo $page_id; ?>">更多内容&gt;&gt;</a></th>
 </tr>
 <?php
 

@@ -23,7 +23,7 @@
 ?>
 
 			<div id="site-info">
-				<a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+				<?php printf( 'Copyright &copy; 2011' ); ?> gzjtlaw.com All Rights Reserved 版权所有<a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php bloginfo( 'name' ); ?>
 				</a>
 			</div><!-- #site-info -->
@@ -33,7 +33,7 @@
 				<!--
 				<a href="<?php echo esc_url( __('http://wordpress.org/', 'twentyten') ); ?>"
 						title="<?php esc_attr_e('Semantic Personal Publishing Platform', 'twentyten'); ?>" rel="generator"> -->
-					<?php printf( 'Copyright &copy; 2011' ); ?>
+					本站由 广州星星觉网络科技有限公司 提供技术支持 QQ:605071089
 				<!-- </a> -->
 			</div><!-- #site-generator -->
 

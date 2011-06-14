@@ -13,9 +13,9 @@ get_header(); ?>
 			<div id="content" role="main">
   <div id="head_ads"><?php print $head_ads;?></div>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-      	   		        <span class="my-entry-title">当前位置:
+      	   		        <div class="my-entry-title">当前位置:
 				<?php the_title(); ?>
-				</span><hr/>	
+				</div>	
 				<!--
 				<div id="nav-above" class="navigation">
 

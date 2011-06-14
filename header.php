@@ -56,14 +56,28 @@
 <div id="wrapper" class="hfeed">
 	<div id="header">
 		<div id="masthead" >
-			<div id="branding" role="banner" style="background:#000 url(wp-content/themes/twentyten/images/header-bg.png); height:100px;">
+		        <div id="first-header">
+<table border="0" width="100%">
+<tr>
+<td>
+<span id="site-description"><?php bloginfo( 'description' ); ?></span>
+</td>
+<td align="right">
+设为首页|
+收藏本站|
+<a href="http://www.gzjtlaw.com/?feed=rss2">
+<img alt="RSS订阅" src="/wp-includes/images/rss.png">RSS订阅</a>
+</td>
+</table>
+</div>
+			<div id="branding" role="banner">
 				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 				<<?php echo $heading_tag; ?> id="site-title">
 					<span>
 						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					</span>
 				</<?php echo $heading_tag; ?>>
-				<div id="site-description"><?php bloginfo( 'description' ); ?></div>
+				
 
 				<?php
 					// Check if this is a post or page, if it has a thumbnail, and if it's a big one

@@ -65,10 +65,10 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 #container {
 	float: left;
 	margin: 0 -240px 0 0;
-	width: 100%;
+	width: 95%;
 }
 #content {
-	margin: 0 280px 0 20px;
+	margin: 0 280px 0 0px;
 
 }
 
@@ -76,7 +76,7 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 #secondary {
 	float: right;
 	overflow: hidden;
-	width: 240px;
+	width: 280px;
 }
 #secondary {
 	clear: right;
@@ -168,7 +168,7 @@ div.menu,
 }
 #wrapper {
 	background: #fff;
-	margin-top: 10px;
+	margin-top: 0px;
 	padding: 0 5px;
 }
 
@@ -186,7 +186,7 @@ div.menu,
 }
 #site-info {
 	/*float: left;*/
-	font-size: 14px;
+	font-size: 12px;
 	/*font-weight: bold;*/
 	/*width: 700px;*/
 	text-align:center;
@@ -337,7 +337,7 @@ a:hover {
 -------------------------------------------------------------- */
 
 #header {
-	padding: 3px 0 0 0;
+	padding: 0px 0 0 0;
 
 }
 #site-title {
@@ -348,20 +348,26 @@ a:hover {
 	width: 700px;
 }
 #site-title a {
-	color: #fff;
+	color: #000099;
 	font-weight: bold;
 	text-decoration: none;
 }
+
+/* 第一个头部 */
+#first-header { 
+       background: #F4F4F4;
+       border-bottom: 1px solid #c3c3c3;
+       height: 32px;
+ }
 /* 副标题 */
 #site-description {
 	//clear: right;
 	//float: right;
-        font-size:21px;
+        font-size: 12px;
         color:red;            
-	font-weight: bold;
-	margin: 0px 0 0px 0;
-        padding-left: 50px;
-        width:600px;           
+	margin: 0px 0 3px 0;
+        /*padding-left: 50px;*/
+       /* width:600px;           */
 }
 
 /* This is the custom header image */
@@ -377,11 +383,14 @@ a:hover {
 -------------------------------------------------------------- */
 
 #access {
-	background:#1453b1; /*rgb(20, 83, 177)*/  /*#428aeb; #6ca8e5;*/
+	/*background:#4DACDA; /*rgb(20, 83, 177)*/  /*#428aeb; #6ca8e5;*/
+        background: url(images/nav_bg.jpg) repeat-x left top;)
 	display: block;
+        font-weight: bold;
 	float: left;
 	margin: 0 auto;
 	margin-top:2px;
+        /*border-top:1px solid #2A7CAE;*/
 	width: 940px;
 }
 #access .menu-header,
@@ -437,8 +446,8 @@ div.menu li {
 #access li:hover > a,
 #access ul ul :hover > a {
 	background: #fff;
-	color: #1453b1;
-    border-top:1px solid #1453b1;
+	color: #07519A;
+        border-top:1px solid #1453b1;
 }
 #access ul li:hover > ul {
 
@@ -452,7 +461,7 @@ div.menu li {
 #access ul li.current-menu-ancestor > a,
 #access ul li.current-menu-item > a,
 #access ul li.current-menu-parent > a {
-    border-top:1px solid #1453b1;
+        border-top:1px solid #1453b1;
 	color: #1453b1;
 	background:#fff;
 }
@@ -607,7 +616,11 @@ text-decoration: underline;
 	font-size: 9pt;
 	/*font-weight: bold;*/
 	/*line-height: 1.3em;*/
-	margin-bottom: 0;
+	margin-top: 24px;
+        margin-bottom: 0;
+        border-top:1px solid #c3daf2;
+        border-bottom:1px solid #c3daf2;
+        background: #F1F7FC;
 }
 #content #head_ads {
 	color: #FF0000;
@@ -1177,6 +1190,11 @@ h3#reply-title {
 	color: #418FD8;
 	font-size:10pt;
 	font-weight: bold;
+        padding-left: 5px;
+        border-top: 1px solid #c3daf2;
+        border-bottom: 1px solid #c3daf2;
+        margin-bottom: 5px;
+        background: #F1F7FC;
 }
 .widget-area a:link,
 .widget-area a:visited {
@@ -1189,6 +1207,11 @@ h3#reply-title {
 .widget-area .entry-meta {
 	font-size: 11px;
 }
+
+.widget-area li { 
+      border-left:0px solid #c3daf2;
+ }
+
 #wp_tag_cloud div {
 	line-height: 1.6em;
 }
@@ -1236,7 +1259,7 @@ h3#reply-title {
 /* Main sidebars */
 #main .widget-area ul {
 	margin-left: 0;
-	padding: 20px 3px 3px 3px;
+	padding: 2px 2px 2px 2px;
 }
 #main .widget-area ul ul {
 	border: none;
@@ -1244,7 +1267,8 @@ h3#reply-title {
 	padding: 0;
 }
 .widget-area {
-    border:0px solid #F00;
+    border:0px solid #52B1DD;
+    margin-top:10px;
 }
 #primary {
 }
@@ -1268,7 +1292,7 @@ h3#reply-title {
 	padding: 18px 0;
 }
 #site-info {
-	font-weight: bold;
+	/*font-weight: bold;*/
 }
 #site-info a {
 	color: #000;
@@ -1289,7 +1313,7 @@ h3#reply-title {
 #site-generator a:hover {
 	text-decoration: underline;
 }
-img#wpstats {
+#wpstats {
 	display: block;
 	margin: 0 auto 10px;
 }
